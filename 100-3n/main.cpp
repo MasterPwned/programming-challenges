@@ -15,10 +15,17 @@ int calculateCycLen(int value) {
 }
 
 int main() {
-	while (true) {
-		int i, j, cycleLength;
+	int i, j, i2, j2, cycleLength;
+	while (cin >> i) {
+		cin >>j;
 		int maxCycleLength = 0;
-		cin >>i >>j;
+		i2 = i;
+		j2 = j;
+		if (i > j) {
+			i = i^j;
+			j = j^i;
+			i = i^j;
+		}
 		
 		for (int x = i; x <= j; x++) {
 			cycleLength = calculateCycLen(x);
@@ -27,7 +34,7 @@ int main() {
 			}	
 		}
 		
-		cout <<i <<" " <<j <<" " <<maxCycleLength <<endl;
+		cout <<i2 <<" " <<j2 <<" " <<maxCycleLength <<endl;
 
 	}
 	return 0;	
