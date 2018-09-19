@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int calculateCycLen(value) {
+int calculateCycLen(int value) {
 	int counter = 1;
 	while (value != 1) {
-		if (value % 2 = 0) {
+		if (value % 2 == 0) {
 			value /= 2;
 			counter += 1;
 		} else {
