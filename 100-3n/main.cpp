@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int calculate(value) {
+int calculateCycLen(value) {
 	int counter = 1;
 	while (value != 1) {
 		if (value % 2 = 0) {
@@ -22,13 +22,13 @@ int main() {
 	cin >>i >>j;
 	
 	for (int x = i; x <= j; x++) {
-		cycleLength = calculate(x);
+		cycleLength = calculateCycLen(x);
 		if (cycleLength > maxCycleLength) {
 			maxCycleLength = cycleLength;
 		}	
 	}
 	
-	cout <<i <<" " <<j <<" " <<; //TODO: put in varible
+	cout <<i <<" " <<j <<" " <<maxCycleLength; //TODO: put in varible
 
 	return 0;
 }
