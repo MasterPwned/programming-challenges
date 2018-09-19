@@ -6,29 +6,29 @@ int calculateCycLen(int value) {
 	while (value != 1) {
 		if (value % 2 == 0) {
 			value /= 2;
-			counter += 1;
 		} else {
 			value = (value * 3) + 1;
-			counter += 1;
 		}
+		counter++;
 	}
 	return counter;
 }
 
 int main() {
-	int i, j, cycleLength;
-	int maxCycleLength = 0;
-	cout <<"Lower and upper bound: ";
-	cin >>i >>j;
-	
-	for (int x = i; x <= j; x++) {
-		cycleLength = calculateCycLen(x);
-		if (cycleLength > maxCycleLength) {
-			maxCycleLength = cycleLength;
-		}	
-	}
-	
-	cout <<i <<" " <<j <<" " <<maxCycleLength; //TODO: put in varible
+	while (true) {
+		int i, j, cycleLength;
+		int maxCycleLength = 0;
+		cin >>i >>j;
+		
+		for (int x = i; x <= j; x++) {
+			cycleLength = calculateCycLen(x);
+			if (cycleLength > maxCycleLength) {
+				maxCycleLength = cycleLength;
+			}	
+		}
+		
+		cout <<i <<" " <<j <<" " <<maxCycleLength <<endl;
 
-	return 0;
+	}
+	return 0;	
 }
