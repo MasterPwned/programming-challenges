@@ -2,7 +2,7 @@
 using namespace std;
 
 void getArray(int l, int h, int r, int *height) {
-	for (int i = l; i <= r; i++) {
+	for (int i = l; i < r; i++) {
 		if (height[i] < h) {
 			height[i] = {h};
 		}
@@ -13,7 +13,11 @@ void printArray(int *height) {
 	int h2 = -1;
 	for (int z = 1; z < 10001; z++) {
 		if (height[z] != h2) {
-			cout << z <<" " <<height[z] <<" ";
+			if (z < 9999) {
+				cout << z <<" " <<height[z] <<" ";
+			} else {
+				cout << z <<" " <<height[z] <<endl;
+			}
 			h2 = height[z];
 		}
 	}
